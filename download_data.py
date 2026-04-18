@@ -46,6 +46,12 @@ def download_s3_folder(bucket_name: str, folder_name: str, local_dir: str = "./d
                 if key.endswith("/") or key == prefix:
                     logger.debug(f"Skipping directory placeholder: {key}")
                     continue
+
+                # Skip files that already exist
+                if target.exists():
+                    logger.info(f"Skipping (already exists): {target}")
+                    continue
+
                 # Create directories if needed
                 target.parent.mkdir(parents=True, exist_ok=True)
 
@@ -65,7 +71,7 @@ def download_s3_folder(bucket_name: str, folder_name: str, local_dir: str = "./d
         raise
 
 
-if __name__ == "__main__":
+if __name__ == "_main_":
     parser = argparse.ArgumentParser(description="Download a folder from an S3 bucket using boto3")
     parser.add_argument("--bucket_name", default="osapiens-terra-challenge", help="Name of the S3 bucket")
     parser.add_argument("--folder_name", default="makeathon-challenge", help="Name of the folder inside the S3 bucket")
