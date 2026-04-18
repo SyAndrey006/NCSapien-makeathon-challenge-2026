@@ -205,3 +205,52 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# --- osapiens Challenge Data ---
+data/
+.data/
+submission/
+metadata/*.geojson
+
+# --- Geospatial & Raster Files ---
+*.tif
+*.tiff
+*.geojson
+*.qgs
+*.qml
+*.aux.xml
+
+# --- Python Virtual Environments ---
+.venv/
+env/
+venv/
+ENV/
+
+# --- Python Build & Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Windows ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+.virtual_documents/
+
+# --- VS Code & IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
