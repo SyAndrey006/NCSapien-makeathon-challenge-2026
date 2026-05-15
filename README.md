@@ -67,3 +67,13 @@ data/makeathon-challenge/
 ```
 
 ## Explore the Notebook for the Full Challenge Walkthrough
+
+## Development Process
+
+We planned the architecture and logic flow before implementation.
+
+### Initial Whiteboard Planning
+![Planning](docs/Initial Overview.jpeg)
+
+### System Design
+![Design](docs/Main idea.jpeg)
